@@ -23,10 +23,10 @@ The goal of this project is to:
 | Category        | Tools & Tech                                           |
 |----------------|--------------------------------------------------------|
 | ETL            | Python, Pandas, SQL                                    |
-| Data Storage   | PostgreSQL / MySQL / SQLite (choose based on project)  |
+| Data Storage   |  MySQL
 | Data Modeling  | Star Schema, Snowflake Schema                          |
-| Analytics      | SQL, Python (Matplotlib / Seaborn), Excel              |
-| Workflow       | Jupyter Notebook, DB Browser, VS Code                  |
+| Analytics      | SQL, Python Excel              |
+| Workflow       | Jupyter Notebook, VS Code                  |
 | Versioning     | Git, GitHub                                            |
 
 ---
@@ -42,17 +42,7 @@ flowchart LR
     E --> F[Analytics & Reporting]
 ---
 
-## 👨‍💻 About Me
-Hi, I'm Ibraheem 👋
-I love being a data detective 🕵️‍♂️ — finding patterns, cleaning chaos, and building systems that turn raw data into powerful business insights. I'm passionate about:
 
-🏗️ Data Engineering
-
-🧰 Data Warehousing
-
-🧠 Data Architecture
-
-📈 Analytics & Automation
 
 Let’s connect and build smarter data-driven solutions together! 💡
 
