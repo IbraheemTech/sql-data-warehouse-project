@@ -40,8 +40,9 @@ flowchart LR
     C --> D[Data Warehousing]
     D --> E[Business Logic Implementation]
     E --> F[Analytics & Reporting]
+---
 
-👨‍💻 About Me
+## 👨‍💻 About Me
 Hi, I'm Ibraheem 👋
 I love being a data detective 🕵️‍♂️ — finding patterns, cleaning chaos, and building systems that turn raw data into powerful business insights. I'm passionate about:
 
