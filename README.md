@@ -31,13 +31,4 @@ The goal of this project is to:
 
 ---
 
-## ⚙️ Workflow Overview
 
-```mermaid
-flowchart LR
-    A[Raw Data Collection] --> B[ETL Processing]
-    B --> C[Data Cleaning & Standardization]
-    C --> D[Data Warehousing]
-    D --> E[Business Logic Implementation]
-    E --> F[Analytics & Reporting]
----
