@@ -31,4 +31,6 @@ The goal of this project is to:
 
 ---
 
-
+#  Data Architecture
+The data architecture of this project follows Medallion Acrchitecture: BRONZE,SILVER, and GOLD.
+docs.Data Architecture.png
