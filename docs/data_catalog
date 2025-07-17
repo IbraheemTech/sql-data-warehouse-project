@@ -1,0 +1,47 @@
+This data catalog provides an overview of the main tables in the Gold Layer of the data warehouse.
+  Each table includes its purpose and a breakdown of its columns with data types and brief descriptions.
+  This helps readers understand the structure, content, and usage of each dataset.
+
+🧍‍♂️ gold.dim_customers
+Purpose: Contains detailed demographic information about customers for analytics and segmentation.
+  
+| Column Name       | Data Type      | Description                                             |
+| ----------------- | -------------- | ------------------------------------------------------- |
+| `customer_number` | `INT`          | Unique identifier assigned to each customer.            |
+| `first_name`      | `NVARCHAR(50)` | Customer’s first name.                                  |
+| `last_name`       | `NVARCHAR(50)` | Customer’s last name.                                   |
+| `country`         | `NVARCHAR(50)` | Two-letter ISO country code.                            |
+| `marital_status`  | `NVARCHAR(50)` | Customer's marital status such as single, married, etc. |
+| `gender`          | `CHAR(1)`      | Gender of the customer (e.g., M, F, O).                 |
+| `birthdate`       | `DATE`         | Customer’s date of birth.                               |
+
+📦 gold.dim_products
+Purpose: Stores reference information about products including classification, cost, and maintenance flags.
+
+| Column Name      | Data Type       | Description                                                          |
+| ---------------- | --------------- | -------------------------------------------------------------------- |
+| `product_id`     | `INT`           | Unique identifier for each product.                                  |
+| `product_number` | `NVARCHAR(50)`  | Internal or external product code.                                   |
+| `product_name`   | `NVARCHAR(50)`  | Full name of the product.                                            |
+| `category_id`    | `INT`           | Identifier linking to the product’s category.                        |
+| `category`       | `NVARCHAR(50)`  | High-level classification of the product.                            |
+| `subcategory`    | `NVARCHAR(50)`  | Detailed classification within a category.                           |
+| `maintenance`    | `NVARCHAR(50)`  | Indicates if the product requires maintenance (`1` = Yes, `0` = No). |
+| `cost`           | `INT`           | Standard cost of the product.                                        |
+| `product_line`   | `NVARCHAR(50)`  | The business line or grouping the product belongs to.                |
+
+
+💰 gold.fact_sales
+Purpose: Contains sales transactions including order details, product and customer linkage, and financial metrics.
+
+| Column Name     | Data Type       | Description                                              |
+| --------------- | --------------- | -------------------------------------------------------- |
+| `order_number`  | `NVARCHAR(50)`  | Unique alphanumeric identifier for the sales order.      |
+| `product_key`   | `INT`           | Foreign key referencing the product in `dim_products`.   |
+| `customer_key`  | `INT`           | Foreign key referencing the customer in `dim_customers`. |
+| `order_date`    | `DATE`          | Date when the order was placed.                          |
+| `shipping_date` | `DATE`          | Date when the order was shipped.                         |
+| `due_date`      | `DATE`          | Due date for delivery or payment.                        |
+| `sales_amount`  | `INT`           | Total sales amount for the transaction.                  |
+| `quantity`      | `INT`           | Number of units sold.                                    |
+| `price`         | `INT`           | Unit price of the product at the time of sale.           |
